@@ -10,7 +10,6 @@ export default {
         "appkey": "111",
         }, c.juheSms || {})
       const APPKEY = juheSmsOptions.appkey
-      console.log(APPKEY)
       fpm.extendModule('sms', {
         send: async args => {
           let tpl_id = args.tpl_id || false
