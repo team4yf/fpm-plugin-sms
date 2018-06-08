@@ -6,6 +6,33 @@
 yarn add fpm-plugin-sms
 ```
 
+## Basic Info
+- Run Action Hook Name: `BEFORE_SERVER_START`
+- ExtendModule Name: `sms`
+- Exception
+  - [x] `SMS`
+    ```javascript
+    const E = {
+      SMS: {
+        SEND_ERROR: {
+          errno: -10011, 
+          code: 'SEND_ERROR', 
+          message: 'the sms server refused the send request'
+        },
+        OPERATE_ERROR: {
+          errno: -10012, 
+          code: 'OPERATE_ERROR', 
+          message: 'the sms server refused the send request'
+        }
+      }
+    }
+    ```
+- `getDependencies()`
+  - [x] `[]`
+- The Reference Of The `Bind()` Method
+  An BizModule Object Contains 1 Functions
+  - [ ] `send`
+
 ### Useage
 
 - Set option in `config.json` Of your project
